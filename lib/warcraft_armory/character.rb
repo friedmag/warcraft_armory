@@ -34,11 +34,11 @@ module WarcraftArmory
     end
     
     def current_title_format
-      @current_title_format ||= (REXML::XPath.first(@doc,"//title/@value") || "%s").value
+      @current_title_format ||= (REXML::XPath.first(@doc,"//title/@value") || "%s").to_s
     end
     
     def title_formats
-      @title_formats ||= _build_title_formats
+      @title_formats ||= _title_formats
     end
     
     def titles
@@ -58,7 +58,7 @@ module WarcraftArmory
     end
     
     private
-    def _build_title_formats
+    def _title_formats
       tf = REXML::XPath.match(@doc,"//knownTitles/title/@value").map { |x| x.to_s }
       tf << current_title_format if (current_title_format)
       tf.sort

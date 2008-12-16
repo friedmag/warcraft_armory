@@ -1,8 +1,13 @@
 require 'warcraft_armory/character_lite'
 require 'warcraft_armory/character'
 
+require 'warcraft_armory/character_reputation'
+
 require 'warcraft_armory/guild_lite'
 require 'warcraft_armory/guild'
+
+require 'warcraft_armory/faction'
+require 'warcraft_armory/faction_category'
 
 module WarcraftArmory
   def self.getRace(id)
