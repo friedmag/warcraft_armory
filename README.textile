@@ -5,24 +5,19 @@ Warcraft Armory allows you to easily query the World of Warcraft Armory site to 
 Both US and EU servers are supported.
 
 Written by "Ariejan de Vroom":mailto:ariejan@ariejan.net
+"Andrea Nall":mailto:anall@andreanall.com
 
-Copyright 2008 Ariejan de Vroom
+Copyright 2008 Ariejan de Vroom, Andrea Nall
 
 h2. Disclaimer
 
 This is the usual dislaimer. I'm not liable when you use this gem. Using it may be against the current (or future) terms of service from Blizzard or WoWarmory.com. 
 
-h2. Dependencies
-
-WarcraftArmory depends on the hpricot gem version >= 0.6.
-
-<pre>gem install hpricot</pre>
-
 h2. Download and installation
 
 Simply install the RubyGem and require it in your project. If you're on rails, require it in your config/environment.rb.
 
-<pre>gem install ariejan-warcraft-armory --source http://gems.github.com</pre>
+<pre>gem install anall-warcraft-armory --source http://gems.github.com</pre>
 
 And require it when you need it:
 
@@ -30,7 +25,7 @@ And require it when you need it:
 
 Add the following to your environment.rb if you want to use Rails 2.1's dependency manager (which is highly recommended):
 
-<pre><code>config.gem "ariejan-warcraft-armory",
+<pre><code>config.gem "anall-warcraft-armory",
            :lib    => "warcraft-armory",
            :source => "http://gems.github.com"</code></pre>
 

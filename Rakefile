@@ -1,22 +1,25 @@
+require 'rubygems'
 require 'rake'
-require 'rake/testtask'
-require 'rake/rdoctask'
+require 'echoe'
 
-desc 'Default: run unit tests.'
-task :default => :test
-
-desc 'Test the acts_as_gold plugin.'
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = true
+Echoe.new('warcraft-armory', '0.0.1') do |p|
+  p.description     = "Retrieve character information from the World of Warcraft Armory"
+  p.url             = "http://github.com/anall/warcraft-armory"
+  p.author          = "Andrea Nall"
+  p.email           = "anall@andreanall.com"
+  p.ignore_pattern  = ["tmp/*", "script/*", "coverage.data"]
+  p.development_dependencies = []
 end
 
-desc 'Generate documentation for the acts_as_gold plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'ActsAsGold'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+Dir["#{File.dirname(__FILE__)}/tasks/*.rake"].sort.each { |ext| load ext }
+
+namespace :test do
+  desc 'Measures test coverage'
+  task :coverage do
+    rm_f "coverage"
+    rm_f "coverage.data"
+    rcov = "rcov --aggregate coverage.data --text-summary -Ilib"
+    system("#{rcov} test/*_test.rb")
+    system("open coverage/index.html") if PLATFORM['darwin']
+  end
 end
