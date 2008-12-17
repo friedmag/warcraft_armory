@@ -1,4 +1,4 @@
-require 'warcraft_armory/character_lite'
+require 'warcraft_armory/character_part'
 require 'warcraft_armory/character'
 
 require 'warcraft_armory/character_reputation'

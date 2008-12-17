@@ -41,7 +41,7 @@ module WarcraftArmory
     end
     
     def members
-      @members ||= @memberData.map { |member| WarcraftArmory::CharacterLite.new(@site,member.attributes) }
+      @members ||= @memberData.map { |member| WarcraftArmory::Character.new(@site,member.attributes) }
     end
     
     def statistics

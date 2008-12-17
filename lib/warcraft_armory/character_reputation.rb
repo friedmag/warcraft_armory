@@ -3,7 +3,7 @@ require "rexml/document"
 require "cgi"
 
 module WarcraftArmory
-  class CharacterReputation
+  class CharacterReputation < CharacterPart
     def self.find(location, realm, character_name)
       site = "http://#{location.to_s}.wowarmory.com"
       url = "#{site}/character-reputation.xml?r=#{CGI.escape realm}&n=#{CGI.escape character_name}"
@@ -11,6 +11,10 @@ module WarcraftArmory
       WarcraftArmory::CharacterReputation.new(site,open(url,"User-Agent" => "Mozilla/5.0 (WarcraftArmory) Firefox/3.0.2"))
     end
 
+    def reputation(location = nil)
+      self
+    end
+    
     def self.fetch(site,urlArgs)
       url = "#{site}/character-reputation.xml?#{urlArgs}"
       WarcraftArmory::CharacterReputation.new(site,open(url,"User-Agent" => "Mozilla/5.0 (WarcraftArmory) Firefox/3.0.2"))
@@ -23,6 +27,10 @@ module WarcraftArmory
       if (info["errCode"] != nil)
         raise info["errCode"]
       end
+      
+      attribs = REXML::XPath.first(@doc,"//character").attributes
+      
+      super(site,attribs)
     end
     
     def factions
