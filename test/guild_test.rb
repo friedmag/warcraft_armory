@@ -24,4 +24,8 @@ class GuildTest < Test::Unit::TestCase
   def test_member_count
     assert_equal 480, @guild.member_count
   end
+  
+  def test_members
+    assert_equal 457, @guild.members.length
+  end
 end

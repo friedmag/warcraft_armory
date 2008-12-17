@@ -5,6 +5,7 @@ require 'warcraft_armory/character_reputation'
 
 require 'warcraft_armory/guild_lite'
 require 'warcraft_armory/guild'
+require 'warcraft_armory/guild_statistics'
 
 require 'warcraft_armory/faction'
 require 'warcraft_armory/faction_category'
