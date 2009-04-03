@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.date = %q{2008-12-16}
   s.description = %q{Retrieve character information from the World of Warcraft Armory}
   s.email = %q{anall@andreanall.com}
-  s.extra_rdoc_files = ["lib/warcraft_armory/character.rb", "lib/warcraft_armory/character_lite.rb", "lib/warcraft_armory/guild.rb", "lib/warcraft_armory/guild_lite.rb", "lib/warcraft_armory.rb", "lib/warcraft_armory_test_hacks.rb", "LICENSE", "README.textile"]
-  s.files = ["Changelog", "init.rb", "lib/warcraft_armory/character.rb", "lib/warcraft_armory/character_lite.rb", "lib/warcraft_armory/guild.rb", "lib/warcraft_armory/guild_lite.rb", "lib/warcraft_armory.rb", "lib/warcraft_armory_test_hacks.rb", "LICENSE", "Manifest", "Rakefile", "README.textile", "test/assets/character.xml", "test/assets/guild.xml", "test/character_test.rb", "test/guild_test.rb", "warcraft-armory.gemspec"]
+  s.extra_rdoc_files = ["lib/warcraft_armory/character.rb", "lib/warcraft_armory/character_part.rb", "lib/warcraft_armory/character_reputation.rb", "lib/warcraft_armory/guild.rb", "lib/warcraft_armory/guild_lite.rb", "lib/warcraft_armory.rb", "lib/warcraft_armory_test_hacks.rb", "LICENSE", "README.textile"]
+  s.files = ["Changelog", "init.rb", "lib/warcraft_armory/character.rb", "lib/warcraft_armory/character_part.rb", "lib/warcraft_armory/character_reputation.rb", "lib/warcraft_armory/guild.rb", "lib/warcraft_armory/guild_lite.rb", "lib/warcraft_armory.rb", "lib/warcraft_armory_test_hacks.rb", "LICENSE", "Rakefile", "README.textile", "test/assets/character.xml", "test/assets/guild.xml", "test/character_test.rb", "test/guild_test.rb", "warcraft-armory.gemspec"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/anall/warcraft-armory}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Warcraft-armory", "--main", "README.textile"]
