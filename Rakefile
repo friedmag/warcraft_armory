@@ -7,7 +7,7 @@ Echoe.new('warcraft-armory', '0.0.1') do |p|
   p.url             = "http://github.com/anall/warcraft-armory"
   p.author          = "Andrea Nall"
   p.email           = "anall@andreanall.com"
-  p.ignore_pattern  = ["tmp/*", "script/*", "coverage.data","lib/warcraft_armory_test_hacks.rb"]
+  p.ignore_pattern  = ["tmp/*", "script/*", "coverage.data"]
   p.development_dependencies = []
 end
 

@@ -1,6 +1,6 @@
-Feature: Retrieve character title format
+Feature: Retrieve character information
   Users should be able to
-  retrieve character titles
+  retrieve all character information
 
 Scenario: Retrieve character title format
   Given a character Gehzry
