@@ -123,6 +123,7 @@ module WarcraftArmory
     end
     
     private
+
     def _title_formats
       tf = REXML::XPath.match(@doc,"//knownTitles/title/@value").map { |x| x.to_s }
       tf << current_title_format if (current_title_format)
